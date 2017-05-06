@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3919FB738E5D5595EBB46FC /* Pods_RecMood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB8CB531681E3CEE8B407D2B /* Pods_RecMood.framework */; };
+		D60FF15E1EBC1FDE001A5146 /* RMMoodListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF15D1EBC1FDE001A5146 /* RMMoodListViewControllerViewModel.swift */; };
+		D60FF1621EBC2014001A5146 /* RMTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1601EBC2014001A5146 /* RMTableViewModel.swift */; };
+		D60FF1631EBC2014001A5146 /* RMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1611EBC2014001A5146 /* RMViewModel.swift */; };
+		D60FF1651EBC24ED001A5146 /* RMMoondListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1641EBC24ED001A5146 /* RMMoondListCell.swift */; };
+		D60FF1671EBC278F001A5146 /* RMImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1661EBC278F001A5146 /* RMImageInfo.swift */; };
+		D60FF1691EBC61D1001A5146 /* RMLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1681EBC61D1001A5146 /* RMLoginViewController.swift */; };
+		D6FA686B1EB71DB0002C11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA68691EB71DB0002C11B2 /* Main.storyboard */; };
+		D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */; };
+		D6FA68701EB71DB0002C11B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */; };
+		D6FA687B1EB71F68002C11B2 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA68791EB71F68002C11B2 /* Mood.storyboard */; };
+		D6FA68801EB72020002C11B2 /* PersonalCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA687E1EB72020002C11B2 /* PersonalCenter.storyboard */; };
+		D6FA68861EB72052002C11B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA68831EB72052002C11B2 /* AppDelegate.swift */; };
+		D6FA68871EB72052002C11B2 /* RMMoondListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FA68851EB72052002C11B2 /* RMMoondListViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		44A3BC2CE6B3BE25FF76DCBB /* Pods-RecMood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecMood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecMood/Pods-RecMood.debug.xcconfig"; sourceTree = "<group>"; };
+		83BEBE934075586AA85226FA /* Pods-RecMood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecMood.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecMood/Pods-RecMood.release.xcconfig"; sourceTree = "<group>"; };
+		CB8CB531681E3CEE8B407D2B /* Pods_RecMood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecMood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60FF1541EBC1E7D001A5146 /* RecMood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecMood-Bridging-Header.h"; sourceTree = "<group>"; };
+		D60FF15D1EBC1FDE001A5146 /* RMMoodListViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodListViewControllerViewModel.swift; sourceTree = "<group>"; };
+		D60FF1601EBC2014001A5146 /* RMTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTableViewModel.swift; sourceTree = "<group>"; };
+		D60FF1611EBC2014001A5146 /* RMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMViewModel.swift; sourceTree = "<group>"; };
+		D60FF1641EBC24ED001A5146 /* RMMoondListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListCell.swift; sourceTree = "<group>"; };
+		D60FF1661EBC278F001A5146 /* RMImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMImageInfo.swift; sourceTree = "<group>"; };
+		D60FF1681EBC61D1001A5146 /* RMLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLoginViewController.swift; sourceTree = "<group>"; };
+		D6FA68621EB71DB0002C11B2 /* RecMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6FA686A1EB71DB0002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6FA686F1EB71DB0002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D6FA68711EB71DB0002C11B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6FA687A1EB71F68002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mood.storyboard; sourceTree = "<group>"; };
+		D6FA687F1EB72020002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PersonalCenter.storyboard; sourceTree = "<group>"; };
+		D6FA68831EB72052002C11B2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6FA68851EB72052002C11B2 /* RMMoondListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D6FA685F1EB71DB0002C11B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3919FB738E5D5595EBB46FC /* Pods_RecMood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6336962EA2F24A9F9465E4AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44A3BC2CE6B3BE25FF76DCBB /* Pods-RecMood.debug.xcconfig */,
+				83BEBE934075586AA85226FA /* Pods-RecMood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C832AA154E7A82F0C6385BDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB8CB531681E3CEE8B407D2B /* Pods_RecMood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D60FF1581EBC1E96001A5146 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6FA68691EB71DB0002C11B2 /* Main.storyboard */,
+				D6FA68791EB71F68002C11B2 /* Mood.storyboard */,
+				D6FA687E1EB72020002C11B2 /* PersonalCenter.storyboard */,
+				D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */,
+				D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */,
+				D6FA68711EB71DB0002C11B2 /* Info.plist */,
+				D60FF1541EBC1E7D001A5146 /* RecMood-Bridging-Header.h */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		D60FF15F1EBC2001001A5146 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				D60FF1601EBC2014001A5146 /* RMTableViewModel.swift */,
+				D60FF1611EBC2014001A5146 /* RMViewModel.swift */,
+				D60FF1661EBC278F001A5146 /* RMImageInfo.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		D6FA68591EB71DB0002C11B2 = {
+			isa = PBXGroup;
+			children = (
+				D6FA68641EB71DB0002C11B2 /* RecMood */,
+				D6FA68631EB71DB0002C11B2 /* Products */,
+				6336962EA2F24A9F9465E4AE /* Pods */,
+				C832AA154E7A82F0C6385BDE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D6FA68631EB71DB0002C11B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6FA68621EB71DB0002C11B2 /* RecMood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6FA68641EB71DB0002C11B2 /* RecMood */ = {
+			isa = PBXGroup;
+			children = (
+				D6FA68811EB72052002C11B2 /* Classes */,
+				D60FF1581EBC1E96001A5146 /* Support Files */,
+			);
+			path = RecMood;
+			sourceTree = "<group>";
+		};
+		D6FA68811EB72052002C11B2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D60FF15F1EBC2001001A5146 /* Lib */,
+				D6FA68821EB72052002C11B2 /* AppDelegate */,
+				D6FA68841EB72052002C11B2 /* Mood */,
+				D60FF1681EBC61D1001A5146 /* RMLoginViewController.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D6FA68821EB72052002C11B2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D6FA68831EB72052002C11B2 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D6FA68841EB72052002C11B2 /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				D6FA68851EB72052002C11B2 /* RMMoondListViewController.swift */,
+				D60FF15D1EBC1FDE001A5146 /* RMMoodListViewControllerViewModel.swift */,
+				D60FF1641EBC24ED001A5146 /* RMMoondListCell.swift */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D6FA68611EB71DB0002C11B2 /* RecMood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6FA68741EB71DB0002C11B2 /* Build configuration list for PBXNativeTarget "RecMood" */;
+			buildPhases = (
+				9C51EBF41C51746D425043E5 /* [CP] Check Pods Manifest.lock */,
+				D6FA685E1EB71DB0002C11B2 /* Sources */,
+				D6FA685F1EB71DB0002C11B2 /* Frameworks */,
+				D6FA68601EB71DB0002C11B2 /* Resources */,
+				AAA951CCD7939110B2FF88B2 /* [CP] Embed Pods Frameworks */,
+				C1F7E1CB34EDB08705D8233A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecMood;
+			productName = RecMood;
+			productReference = D6FA68621EB71DB0002C11B2 /* RecMood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D6FA685A1EB71DB0002C11B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RM;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "李亚洲";
+				TargetAttributes = {
+					D6FA68611EB71DB0002C11B2 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = H2DBJCY9C5;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D6FA685D1EB71DB0002C11B2 /* Build configuration list for PBXProject "RecMood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D6FA68591EB71DB0002C11B2;
+			productRefGroup = D6FA68631EB71DB0002C11B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D6FA68611EB71DB0002C11B2 /* RecMood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D6FA68601EB71DB0002C11B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6FA68701EB71DB0002C11B2 /* LaunchScreen.storyboard in Resources */,
+				D6FA68801EB72020002C11B2 /* PersonalCenter.storyboard in Resources */,
+				D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */,
+				D6FA687B1EB71F68002C11B2 /* Mood.storyboard in Resources */,
+				D6FA686B1EB71DB0002C11B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C51EBF41C51746D425043E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AAA951CCD7939110B2FF88B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecMood/Pods-RecMood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F7E1CB34EDB08705D8233A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecMood/Pods-RecMood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D6FA685E1EB71DB0002C11B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D60FF1621EBC2014001A5146 /* RMTableViewModel.swift in Sources */,
+				D60FF1671EBC278F001A5146 /* RMImageInfo.swift in Sources */,
+				D6FA68861EB72052002C11B2 /* AppDelegate.swift in Sources */,
+				D60FF1651EBC24ED001A5146 /* RMMoondListCell.swift in Sources */,
+				D6FA68871EB72052002C11B2 /* RMMoondListViewController.swift in Sources */,
+				D60FF1691EBC61D1001A5146 /* RMLoginViewController.swift in Sources */,
+				D60FF1631EBC2014001A5146 /* RMViewModel.swift in Sources */,
+				D60FF15E1EBC1FDE001A5146 /* RMMoodListViewControllerViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D6FA68691EB71DB0002C11B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6FA686A1EB71DB0002C11B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6FA686F1EB71DB0002C11B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D6FA68791EB71F68002C11B2 /* Mood.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6FA687A1EB71F68002C11B2 /* Base */,
+			);
+			name = Mood.storyboard;
+			sourceTree = "<group>";
+		};
+		D6FA687E1EB72020002C11B2 /* PersonalCenter.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6FA687F1EB72020002C11B2 /* Base */,
+			);
+			name = PersonalCenter.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D6FA68721EB71DB0002C11B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6FA68731EB71DB0002C11B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D6FA68751EB71DB0002C11B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44A3BC2CE6B3BE25FF76DCBB /* Pods-RecMood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = H2DBJCY9C5;
+				INFOPLIST_FILE = RecMood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecMood/RecMood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D6FA68761EB71DB0002C11B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BEBE934075586AA85226FA /* Pods-RecMood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = H2DBJCY9C5;
+				INFOPLIST_FILE = RecMood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecMood/RecMood-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D6FA685D1EB71DB0002C11B2 /* Build configuration list for PBXProject "RecMood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6FA68721EB71DB0002C11B2 /* Debug */,
+				D6FA68731EB71DB0002C11B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6FA68741EB71DB0002C11B2 /* Build configuration list for PBXNativeTarget "RecMood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6FA68751EB71DB0002C11B2 /* Debug */,
+				D6FA68761EB71DB0002C11B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D6FA685A1EB71DB0002C11B2 /* Project object */;
+}
