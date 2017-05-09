@@ -27,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         else
         {
-            let loginVc = RMStoryBoardLoader.loginViewController()
-            let nav = UINavigationController.init(rootViewController: loginVc) //RMStoryBoardLoader.loginViewControllerNav()
+            let nav = RMStoryBoardLoader.loginViewControllerNav()
             if let loginVc = nav.viewControllers.first as? RMLoginViewController {
                 loginVc.viewModel = RMLoginViewControllerViewModel()
             }

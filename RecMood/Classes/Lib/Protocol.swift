@@ -9,7 +9,7 @@
 protocol RMBindViewModelProperty
 {
     associatedtype T : RMViewModel
-    var viewModel:T? { get set }
+    var viewModel:T! { get set }
 }
 
 protocol RMBindViewModelMethod
