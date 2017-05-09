@@ -6,7 +6,8 @@
 //  Copyright © 2017年 李亚洲. All rights reserved.
 //
 
-public class RMViewModel
+protocol RMViewModel
 {
+    var title:String? { get set }
 }
 

@@ -6,8 +6,7 @@
 //  Copyright © 2017年 李亚洲. All rights reserved.
 //
 
-import ReactiveSwift
-import Result
+import Foundation
 
 struct RMMoodModel
 {
@@ -19,6 +18,8 @@ struct RMMoodModel
 
 class RMMoodListViewControllerViewModel: RMTableViewModel
 {
+    var title: String? = "历史jlu"
+    
     private var moodList : Array<RMMoodModel>?;
     
     func itemFor(index:IndexPath) -> RMMoodModel?

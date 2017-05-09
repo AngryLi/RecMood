@@ -16,6 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        self.window = UIWindow.init(frame: UIScreen.main.bounds)
+        self.window?.makeKeyAndVisible()
+        
+        if RMUserAccountManager.default.isLogin()
+        {
+            self.window?.rootViewController = RMStoryBoardLoader.mainViewController()
+        }
+        else
+        {
+            let loginVc = RMStoryBoardLoader.loginViewController()
+            let nav = UINavigationController.init(rootViewController: loginVc) //RMStoryBoardLoader.loginViewControllerNav()
+            if let loginVc = nav.viewControllers.first as? RMLoginViewController {
+                loginVc.viewModel = RMLoginViewControllerViewModel()
+            }
+            self.window?.rootViewController = nav
+        }
+        
         return true
     }
 
