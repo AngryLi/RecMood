@@ -21,7 +21,9 @@
 		D60FF1A91EC1A09D001A5146 /* Macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1A81EC1A09D001A5146 /* Macros.swift */; };
 		D60FF1B11EC1AF0C001A5146 /* RMMoondListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1AB1EC1AF0C001A5146 /* RMMoondListViewController.swift */; };
 		D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */; };
-		D60FF1B31EC1AF0C001A5146 /* RMMoodListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1B01EC1AF0C001A5146 /* RMMoodListViewControllerViewModel.swift */; };
+		D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */; };
+		D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */; };
+		D6B127E21EC5C1C200980EDA /* RMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B127E11EC5C1C200980EDA /* RMLoginService.swift */; };
 		D6FA686B1EB71DB0002C11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA68691EB71DB0002C11B2 /* Main.storyboard */; };
 		D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */; };
 		D6FA68701EB71DB0002C11B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */; };
@@ -48,7 +50,9 @@
 		D60FF1A81EC1A09D001A5146 /* Macros.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Macros.swift; sourceTree = "<group>"; };
 		D60FF1AB1EC1AF0C001A5146 /* RMMoondListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListViewController.swift; sourceTree = "<group>"; };
 		D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListCell.swift; sourceTree = "<group>"; };
-		D60FF1B01EC1AF0C001A5146 /* RMMoodListViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodListViewControllerViewModel.swift; sourceTree = "<group>"; };
+		D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodListViewControllerViewModel.swift; sourceTree = "<group>"; };
+		D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMValidationService.swift; sourceTree = "<group>"; };
+		D6B127E11EC5C1C200980EDA /* RMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLoginService.swift; sourceTree = "<group>"; };
 		D6FA68621EB71DB0002C11B2 /* RecMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA686A1EB71DB0002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				D60FF1981EC157E6001A5146 /* Protocol.swift */,
 				D60FF1A61EC1869D001A5146 /* RMBaseViewController.swift */,
 				D60FF1A81EC1A09D001A5146 /* Macros.swift */,
+				D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				D60FF19E1EC15E0D001A5146 /* Controller */,
 				D60FF1A01EC15E0D001A5146 /* ViewModel */,
+				D6B127E11EC5C1C200980EDA /* RMLoginService.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -182,10 +188,10 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		D60FF1AF1EC1AF0C001A5146 /* ViewModel */ = {
+		D63ACA601EC469FA00F35719 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D60FF1B01EC1AF0C001A5146 /* RMMoodListViewControllerViewModel.swift */,
+				D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,9 +246,9 @@
 		D6FA68841EB72052002C11B2 /* Mood */ = {
 			isa = PBXGroup;
 			children = (
+				D63ACA601EC469FA00F35719 /* ViewModel */,
 				D60FF1AA1EC1AF0C001A5146 /* Controller */,
 				D60FF1AC1EC1AF0C001A5146 /* View */,
-				D60FF1AF1EC1AF0C001A5146 /* ViewModel */,
 			);
 			path = Mood;
 			sourceTree = "<group>";
@@ -286,6 +292,11 @@
 						DevelopmentTeam = H2DBJCY9C5;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -378,14 +389,16 @@
 			files = (
 				D60FF1621EBC2014001A5146 /* RMTableViewModel.swift in Sources */,
 				D60FF1921EC0A0C5001A5146 /* RMStoryBoardLoad.swift in Sources */,
+				D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */,
 				D60FF1671EBC278F001A5146 /* RMImageInfo.swift in Sources */,
 				D60FF1B11EC1AF0C001A5146 /* RMMoondListViewController.swift in Sources */,
 				D60FF1A71EC1869D001A5146 /* RMBaseViewController.swift in Sources */,
 				D60FF1A91EC1A09D001A5146 /* Macros.swift in Sources */,
 				D6FA68861EB72052002C11B2 /* AppDelegate.swift in Sources */,
+				D6B127E21EC5C1C200980EDA /* RMLoginService.swift in Sources */,
+				D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */,
 				D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */,
 				D60FF1A11EC15E0D001A5146 /* RMLoginViewController.swift in Sources */,
-				D60FF1B31EC1AF0C001A5146 /* RMMoodListViewControllerViewModel.swift in Sources */,
 				D60FF1A31EC15E3B001A5146 /* RMLoginViewControllerViewModel.swift in Sources */,
 				D60FF1971EC0A56C001A5146 /* RMUserAccountManager.swift in Sources */,
 				D60FF1991EC157E6001A5146 /* Protocol.swift in Sources */,

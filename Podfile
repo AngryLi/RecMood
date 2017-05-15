@@ -5,13 +5,13 @@ source 'https://github.com/CocoaPods/Specs.git'  # 官方库
 platform :ios, '9.0'
 
 def reactive_swift
-    # pod 'ReactiveSwift', '~> 1.1'
+    pod 'ReactiveSwift'
     pod 'ReactiveCocoa'
 end
 
 def rx_swift
-    pod 'RxSwift',    '~> 3.0'
-    pod 'RxCocoa',    '~> 3.0'
+    pod 'RxSwift'
+    pod 'RxCocoa'
 end
 
 def dev_pods
@@ -29,5 +29,5 @@ target 'RecMood' do
   dev_pods
   
   rx_swift
-  
+#  reactive_swift
 end

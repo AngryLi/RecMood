@@ -6,21 +6,37 @@
 //  Copyright © 2017年 李亚洲. All rights reserved.
 //
 
-struct  RMLoginViewControllerViewModel: RMViewModel
+import RxSwift
+
+class  RMLoginViewControllerViewModel: RMViewModel
 {
+    typealias ValidateResult = ValidateService.Result
+    typealias LoginResult = LoginService.Result
     var title: String? = "登录"
+    let phoneAvaliable : Observable<ValidateResult>
+    let passwordAvaliable : Observable<ValidateResult>
     
-    func isAvaliable(password:String?) -> Bool {
-        guard let pwd = password else {
-            return false
-        }
-        return pwd.characters.count >= 6
-    }
+    let loginResult : Observable<LoginResult>
     
-    func isAvaliable(phone:String?) -> Bool {
-        guard let phoneNumber = phone else {
-            return false
-        }
-        return phoneNumber.characters.count == 11
+    
+    init(
+        obserable:(
+        phone:Observable<String>,
+        password:Observable<String>
+        ),
+        loginTap:Observable<Void>
+        )
+    {
+        self.phoneAvaliable = obserable.phone.flatMapLatest({
+            ValidateService.validate(phoneNumber: $0).catchErrorJustReturn(ValidateResult.error(message: "校验出错")).subscribeOn(MainScheduler.instance)
+        }).shareReplay(1)
+        self.passwordAvaliable = obserable.password.flatMapLatest( {
+            ValidateService.validate(password: $0).catchErrorJustReturn(ValidateResult.error(message: "校验出错")).subscribeOn(MainScheduler.instance)
+        }).shareReplay(1)
+        
+        let input = Observable.combineLatest(obserable.phone, obserable.password)
+        self.loginResult = loginTap.throttle(1, scheduler: MainScheduler.instance).withLatestFrom(input).flatMapLatest({
+            LoginService.login(phone: $0.0, password: $0.1)
+        })
     }
 }

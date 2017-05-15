@@ -17,10 +17,10 @@ protocol RMBindViewModelMethod
     func bindViewModel()
 }
 
-protocol RMBindViewModelable : RMBindViewModelProperty, RMBindViewModelMethod
-{
-    
-}
+//protocol RMBindViewModelable : RMBindViewModelProperty, RMBindViewModelMethod
+//{
+//    
+//}
 /*
 extension RMBindViewModelMethod where Self : UIViewController
 {

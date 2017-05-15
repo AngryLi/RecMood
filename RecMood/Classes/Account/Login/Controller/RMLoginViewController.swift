@@ -12,15 +12,21 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class RMLoginViewController : RMBaseViewController, RMBindViewModelable
+class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
 {
     @IBOutlet weak var tfPhone : UITextField!
     @IBOutlet weak var tfPassword : UITextField!
     
 //    @IBOutlet weak var btnGetVerifyCode : UIButton!
     @IBOutlet weak var btnLogin : UIButton!
+
     
-    var viewModel: RMLoginViewControllerViewModel!
+    lazy var viewModel: RMLoginViewControllerViewModel! = {
+        let observable = (self.tfPhone.rx.text.orEmpty.asObservable(), self.tfPassword.rx.text.orEmpty.asObservable())
+        let tap = self.btnLogin.rx.tap.asObservable()
+        return RMLoginViewControllerViewModel(obserable: observable, loginTap: tap)
+    }()
+    
     
     override func viewDidLoad()
     {
@@ -40,12 +46,13 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelable
     
     private func renderSubViews()
     {
+
         
-        self.btnLogin.rx.controlEvent(UIControlEvents.touchUpInside).subscribe { [unowned self](event) in
+        self.btnLogin.rx.tap.subscribe { [weak self](event) in
             switch event
             {
             case .next(_):
-                self.showAlert(title: "🙄", message: "😋")
+                self?.showAlert(title: "🙄", message: "😋")
             default:
                 break
             }
@@ -66,15 +73,15 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelable
         self.title = self.viewModel.title
         
         
-        let phoneIsAvaliable = self.tfPhone.rx.text.orEmpty.map {[unowned self] (text) -> Bool in
-            self.viewModel.isAvaliable(phone: text)
-        }
-        let passwordIsAvaliiable = self.tfPassword.rx.text.orEmpty.map {[unowned self] (text) -> Bool in
-            self.viewModel.isAvaliable(password: text)
-        }
-        phoneIsAvaliable.bind(to: self.tfPassword.rx.isEnabled).disposed(by: self.disposeBag)
-        Observable.combineLatest(phoneIsAvaliable, passwordIsAvaliiable, resultSelector: { (phone, code) -> Bool in
-            return phone && code
-        }).bind(to: self.btnLogin.rx.isEnabled).addDisposableTo(self.disposeBag)
+//        let phoneIsAvaliable = self.tfPhone.rx.text.orEmpty.map {[unowned self] (text) -> Bool in
+//            self.viewModel.isAvaliable(phone: text)
+//        }
+//        let passwordIsAvaliiable = self.tfPassword.rx.text.orEmpty.map {[unowned self] (text) -> Bool in
+//            self.viewModel.isAvaliable(password: text)
+//        }
+//        phoneIsAvaliable.bind(to: self.tfPassword.rx.isEnabled).disposed(by: self.disposeBag)
+//        Observable.combineLatest(phoneIsAvaliable, passwordIsAvaliiable, resultSelector: { (phone, code) -> Bool in
+//            return phone && code
+//        }).bind(to: self.btnLogin.rx.isEnabled).addDisposableTo(self.disposeBag)
     }
 }
