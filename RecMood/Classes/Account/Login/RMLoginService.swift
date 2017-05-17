@@ -9,19 +9,49 @@
 import Foundation
 
 import RxSwift
+import Alamofire
+
+typealias ResponseResult = Dictionary<String, Any>
+struct ResponseError : Error
+{
+    let statusCode:Int
+    let errorMsg:String
+}
+
+struct ResponseFailure : Error {
+    let statusCode:Int
+    let reason:Int
+}
 
 class LoginService
 {
-    enum Result
+    static func login( phone:String, password:String ) -> Observable<ResponseResult>
     {
-        case ok(message:String)
-        case error(errMsg:String)
-        case failure(reason:String)
-    }
-    
-    static func login( phone:String, password:String ) -> Observable<Result>
-    {
-        return Observable.just(Result.ok(message: "login sucess"))
+        return Observable.create { (observer) -> BooleanDisposable in
+            let params : Parameters = [:]
+            request("login", method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+                if response.result.isSuccess
+                {
+                    if let response = response.result.value as? Dictionary<String, Dictionary<String, Any>>
+                    {
+                        observer.onNext(response["content"] ?? [:])
+                        observer.onCompleted()
+                    }
+                    else
+                    {
+                        
+                    }
+                }
+                else
+                {
+                    if let error = response.error
+                    {
+                        print(error)
+                    }
+                }
+            }
+            return BooleanDisposable()
+        }
     }
 }
 

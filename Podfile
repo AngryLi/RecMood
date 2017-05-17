@@ -2,7 +2,7 @@
 
 source 'https://github.com/CocoaPods/Specs.git'  # 官方库
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 def reactive_swift
     pod 'ReactiveSwift'

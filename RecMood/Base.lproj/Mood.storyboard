@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F67a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ct7-bd-9PP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ct7-bd-9PP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,17 +23,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XsS-fv-m8z" kind="relationship" relationship="rootViewController" id="2zs-0h-LXH"/>
+                        <segue destination="XsS-fv-m8z" kind="relationship" relationship="rootViewController" id="Pbt-2K-eqw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFF-a1-ek0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1084" y="811.84407796101959"/>
         </scene>
-        <!--Moond List View Controller Table View Controller-->
+        <!--Moond List View Controller-->
         <scene sceneID="9tL-TV-oRY">
             <objects>
-                <tableViewController id="XsS-fv-m8z" customClass="RMMoondListViewControllerTableViewController" customModule="RecMood" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="XsS-fv-m8z" customClass="RMMoondListViewController" customModule="RecMood" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="204" sectionHeaderHeight="28" sectionFooterHeight="28" id="fP9-o2-Hkx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,6 +60,9 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-Hn-gcY">
                                             <rect key="frame" x="8" y="68.5" width="359" height="119"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="119" id="WPW-Yk-vDN"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -74,18 +78,86 @@
                                         <constraint firstItem="Fv9-lK-eXK" firstAttribute="top" secondItem="fta-Lo-GLi" secondAttribute="topMargin" constant="8" id="qnU-GM-qDH"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgContent" destination="oFu-Hn-gcY" id="EAd-qy-2MW"/>
+                                    <outlet property="imgContentHeight" destination="WPW-Yk-vDN" id="FFu-f1-MyO"/>
+                                    <outlet property="imgContentTopMargin" destination="Z0X-R6-8HE" id="TGm-EE-Vrg"/>
+                                    <outlet property="lbContent" destination="WLa-9O-9LE" id="MxV-8H-obe"/>
+                                    <outlet property="lbContentTopMargin" destination="aAV-9u-fUU" id="9iF-3B-82j"/>
+                                    <outlet property="lbTitle" destination="Fv9-lK-eXK" id="kJA-pA-k9H"/>
+                                    <outlet property="lbTitleTopMargin" destination="qnU-GM-qDH" id="60x-xm-b8H"/>
+                                    <segue destination="Df4-lX-hJA" kind="show" id="mQx-26-xPA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="XsS-fv-m8z" id="jW9-t4-nEQ"/>
-                            <outlet property="delegate" destination="XsS-fv-m8z" id="T3D-EC-QmG"/>
-                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ki5-ca-LHs"/>
+                    <navigationItem key="navigationItem" id="Ki5-ca-LHs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="fastForward" id="pYM-4r-u20">
+                            <connections>
+                                <segue destination="F0I-Lv-teX" kind="presentation" identifier="showLeftMenu" animates="NO" modalPresentationStyle="overFullScreen" id="fZh-Oo-vro"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUD-Km-iNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="811.84407796101959"/>
         </scene>
+        <!--Left Menu Controller-->
+        <scene sceneID="tyl-ph-JCL">
+            <objects>
+                <viewController storyboardIdentifier="RMLeftMenuController" id="F0I-Lv-teX" customClass="RMLeftMenuController" customModule="RecMood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e8v-pn-kYx"/>
+                        <viewControllerLayoutGuide type="bottom" id="gQl-eL-U5v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fwS-17-MeY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-Dk-UKb">
+                                <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YDg-Dk-UKb" firstAttribute="top" secondItem="fwS-17-MeY" secondAttribute="top" id="6y7-Eb-E5A"/>
+                            <constraint firstItem="gQl-eL-U5v" firstAttribute="top" secondItem="YDg-Dk-UKb" secondAttribute="bottom" id="a4Y-VC-hhU"/>
+                            <constraint firstItem="YDg-Dk-UKb" firstAttribute="leading" secondItem="fwS-17-MeY" secondAttribute="leading" id="cEx-Jm-sTW"/>
+                            <constraint firstAttribute="trailing" secondItem="YDg-Dk-UKb" secondAttribute="trailing" constant="100" id="sWh-h2-nQ8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="YDg-Dk-UKb" id="k6m-AO-Ojw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXg-fO-iXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2637.5999999999999" y="811.84407796101959"/>
+        </scene>
+        <!--Mood Detail View Controller-->
+        <scene sceneID="hJb-R3-6DL">
+            <objects>
+                <viewController id="Df4-lX-hJA" customClass="RMMoodDetailViewController" customModule="RecMood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rdV-lz-r9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y0I-uS-PcA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hJv-Ru-2MA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="F0I-Lv-teX" kind="presentation" identifier="showLeftMenu" modalPresentationStyle="overFullScreen" id="SLI-Gd-XV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sBB-bV-6hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="1463"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="SLI-Gd-XV3"/>
+    </inferredMetricsTieBreakers>
 </document>

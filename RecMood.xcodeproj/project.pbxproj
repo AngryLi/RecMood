@@ -23,6 +23,9 @@
 		D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */; };
 		D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */; };
 		D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */; };
+		D690F4071ECAE9C30084A76E /* RMLeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F4061ECAE9C30084A76E /* RMLeftMenuController.swift */; };
+		D690F4091ECAF5C10084A76E /* BouncePresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F4081ECAF5C10084A76E /* BouncePresentAnimation.swift */; };
+		D690F40B1ECB065D0084A76E /* RMMoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F40A1ECB065D0084A76E /* RMMoodDetailViewController.swift */; };
 		D6B127E21EC5C1C200980EDA /* RMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B127E11EC5C1C200980EDA /* RMLoginService.swift */; };
 		D6FA686B1EB71DB0002C11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA68691EB71DB0002C11B2 /* Main.storyboard */; };
 		D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListCell.swift; sourceTree = "<group>"; };
 		D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMValidationService.swift; sourceTree = "<group>"; };
+		D690F4061ECAE9C30084A76E /* RMLeftMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLeftMenuController.swift; sourceTree = "<group>"; };
+		D690F4081ECAF5C10084A76E /* BouncePresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncePresentAnimation.swift; sourceTree = "<group>"; };
+		D690F40A1ECB065D0084A76E /* RMMoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodDetailViewController.swift; sourceTree = "<group>"; };
 		D6B127E11EC5C1C200980EDA /* RMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLoginService.swift; sourceTree = "<group>"; };
 		D6FA68621EB71DB0002C11B2 /* RecMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA686A1EB71DB0002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				D6FA68691EB71DB0002C11B2 /* Main.storyboard */,
-				D6FA68791EB71F68002C11B2 /* Mood.storyboard */,
 				D6FA687E1EB72020002C11B2 /* PersonalCenter.storyboard */,
 				D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */,
 				D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */,
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D60FF1AB1EC1AF0C001A5146 /* RMMoondListViewController.swift */,
+				D690F40A1ECB065D0084A76E /* RMMoodDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,9 +252,12 @@
 		D6FA68841EB72052002C11B2 /* Mood */ = {
 			isa = PBXGroup;
 			children = (
+				D6FA68791EB71F68002C11B2 /* Mood.storyboard */,
 				D63ACA601EC469FA00F35719 /* ViewModel */,
 				D60FF1AA1EC1AF0C001A5146 /* Controller */,
 				D60FF1AC1EC1AF0C001A5146 /* View */,
+				D690F4061ECAE9C30084A76E /* RMLeftMenuController.swift */,
+				D690F4081ECAF5C10084A76E /* BouncePresentAnimation.swift */,
 			);
 			path = Mood;
 			sourceTree = "<group>";
@@ -387,14 +396,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D690F4091ECAF5C10084A76E /* BouncePresentAnimation.swift in Sources */,
 				D60FF1621EBC2014001A5146 /* RMTableViewModel.swift in Sources */,
 				D60FF1921EC0A0C5001A5146 /* RMStoryBoardLoad.swift in Sources */,
 				D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */,
+				D690F40B1ECB065D0084A76E /* RMMoodDetailViewController.swift in Sources */,
 				D60FF1671EBC278F001A5146 /* RMImageInfo.swift in Sources */,
 				D60FF1B11EC1AF0C001A5146 /* RMMoondListViewController.swift in Sources */,
 				D60FF1A71EC1869D001A5146 /* RMBaseViewController.swift in Sources */,
 				D60FF1A91EC1A09D001A5146 /* Macros.swift in Sources */,
 				D6FA68861EB72052002C11B2 /* AppDelegate.swift in Sources */,
+				D690F4071ECAE9C30084A76E /* RMLeftMenuController.swift in Sources */,
 				D6B127E21EC5C1C200980EDA /* RMLoginService.swift in Sources */,
 				D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */,
 				D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */,
@@ -431,6 +443,7 @@
 				D6FA687A1EB71F68002C11B2 /* Base */,
 			);
 			name = Mood.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		D6FA687E1EB72020002C11B2 /* PersonalCenter.storyboard */ = {
@@ -547,7 +560,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H2DBJCY9C5;
 				INFOPLIST_FILE = RecMood/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,7 +578,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = H2DBJCY9C5;
 				INFOPLIST_FILE = RecMood/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";

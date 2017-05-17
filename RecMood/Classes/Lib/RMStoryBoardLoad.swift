@@ -24,6 +24,7 @@ class RMStoryBoardLoader
         case loginViewController = "RMLoginViewController"
         case loginViewControllerNav = "RMLoginViewController_Nav"
         case mainViewController = "RMMainViewController"
+        case leftMenu = "RMLeftMenuController"
     }
     
     class func loginViewController() -> UIViewController
@@ -37,7 +38,12 @@ class RMStoryBoardLoader
     
     class func mainViewController() -> UITabBarController
     {
-        return self.load(storyName: .account, controllerIdentifier: .mainViewController) as! UITabBarController
+        return self.load(storyName: .main, controllerIdentifier: .mainViewController) as! UITabBarController
+    }
+    
+    class func leftMenuViewController() -> UIViewController
+    {
+        return self.load(storyName: .mood, controllerIdentifier: .leftMenu)
     }
     
     // MARK: private

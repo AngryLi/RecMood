@@ -8,15 +8,41 @@
 
 import UIKit
 
+import UserNotifications
+
+private let usingNotification = false
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate
+{
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings { (setting:UNNotificationSettings) in
+            switch setting.authorizationStatus
+            {
+            case .notDetermined:
+                guard usingNotification else {
+                    break
+                }
+                center.requestAuthorization(options: [.alert, .badge, .sound, .carPlay]) { (granted, error) in
+                    if granted
+                    {
+                        
+                    }
+                    else if let _ = error
+                    {
+                        
+                    }
+                }
+            default:
+                break
+            }
+        }
+        center.delegate = self
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
@@ -26,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
-        if RMUserAccountManager.default.isLogin()
+        if !RMUserAccountManager.default.isLogin()
         {
             self.window?.rootViewController = RMStoryBoardLoader.mainViewController()
         }
@@ -41,6 +67,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         completionHandler(.noData);
     }
-
 }
 

@@ -46,17 +46,15 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
     
     private func renderSubViews()
     {
-
-        
-        self.btnLogin.rx.tap.subscribe { [weak self](event) in
-            switch event
-            {
-            case .next(_):
-                self?.showAlert(title: "🙄", message: "😋")
-            default:
-                break
-            }
-        }.addDisposableTo(self.disposeBag)
+//        self.btnLogin.rx.tap.subscribe { [weak self](event) in
+//            switch event
+//            {
+//            case .next(_):
+//                self?.showAlert(title: "🙄", message: "😋")
+//            default:
+//                break
+//            }
+//        }.addDisposableTo(self.disposeBag)
     }
     
     private func showAlert(title:String, message:String)
@@ -70,9 +68,28 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
     override func bindViewModel()
     {
         super.bindViewModel()
+        
         self.title = self.viewModel.title
         
+        self.viewModel.loginAvaliable.bind(to: self.btnLogin.rx.isEnabled).addDisposableTo(self.disposeBag)
         
+        self.viewModel.loginResult.subscribe { (event) in
+            switch event
+            {
+            case .next(let element):
+                switch element {
+                case .ok(message: let message):
+                    print(message)
+                    break
+                default:
+                    break
+                }
+                break
+                
+            default:
+                break
+            }
+        }.addDisposableTo(self.disposeBag)
 //        let phoneIsAvaliable = self.tfPhone.rx.text.orEmpty.map {[unowned self] (text) -> Bool in
 //            self.viewModel.isAvaliable(phone: text)
 //        }
