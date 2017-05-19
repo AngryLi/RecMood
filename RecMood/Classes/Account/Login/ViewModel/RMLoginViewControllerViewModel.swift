@@ -25,10 +25,7 @@ class  RMLoginViewControllerViewModel: RMViewModel
     
     let loginAvaliable : Observable<Bool>
     
-    
     let loginResult : Observable<SimpleResult>
-    
-    private(set) var loginSucess : Bool = false
     
     init(
         obserable:(
@@ -41,6 +38,7 @@ class  RMLoginViewControllerViewModel: RMViewModel
         self.phoneAvaliable = obserable.phone.flatMapLatest({
             ValidateService.validate(phoneNumber: $0).catchErrorJustReturn(ValidateResult.error(message: "校验出错")).subscribeOn(MainScheduler.instance)
         }).shareReplay(1)
+        
         self.passwordAvaliable = obserable.password.flatMapLatest( {
             ValidateService.validate(password: $0).catchErrorJustReturn(ValidateResult.error(message: "校验出错")).subscribeOn(MainScheduler.instance)
         }).shareReplay(1)

@@ -73,6 +73,13 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
         
         self.viewModel.loginAvaliable.bind(to: self.btnLogin.rx.isEnabled).addDisposableTo(self.disposeBag)
         
+        
+        self.viewModel.loginAvaliable.map { return $0 ? UIColor.blue : UIColor.lightGray }.subscribe { (event) in
+            if case let Event.next(color) = event {
+                self.btnLogin.backgroundColor = color
+            }
+        }.addDisposableTo(self.disposeBag)
+        
         self.viewModel.loginResult.subscribe { (event) in
             switch event
             {

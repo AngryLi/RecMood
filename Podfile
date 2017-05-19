@@ -29,5 +29,7 @@ target 'RecMood' do
   dev_pods
   
   rx_swift
+  pod 'Masonry'
+  
 #  reactive_swift
 end
