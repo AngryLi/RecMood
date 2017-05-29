@@ -23,14 +23,11 @@
 		D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */; };
 		D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */; };
 		D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */; };
+		D67947B61ED17A39005FD6EF /* HPMailDirectDrawCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D67947B51ED17A39005FD6EF /* HPMailDirectDrawCell.m */; };
 		D690F4071ECAE9C30084A76E /* RMLeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F4061ECAE9C30084A76E /* RMLeftMenuController.swift */; };
 		D690F4091ECAF5C10084A76E /* BouncePresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F4081ECAF5C10084A76E /* BouncePresentAnimation.swift */; };
 		D690F40B1ECB065D0084A76E /* RMMoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F40A1ECB065D0084A76E /* RMMoodDetailViewController.swift */; };
 		D690F4211ECC6DAB0084A76E /* RMLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D690F41F1ECC6DAB0084A76E /* RMLoginService.swift */; };
-		D690F4241ECC6ECA0084A76E /* SPFBottomOrderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D690F4231ECC6ECA0084A76E /* SPFBottomOrderInfoView.m */; };
-		D690F4281ECC71530084A76E /* SPFBottomOrderInfoAdressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D690F4261ECC71530084A76E /* SPFBottomOrderInfoAdressCell.m */; };
-		D690F4291ECC71530084A76E /* SPFBottomOrderInfoAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D690F4271ECC71530084A76E /* SPFBottomOrderInfoAdressCell.xib */; };
-		D690F42C1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D690F42B1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.m */; };
 		D6FA686B1EB71DB0002C11B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA68691EB71DB0002C11B2 /* Main.storyboard */; };
 		D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */; };
 		D6FA68701EB71DB0002C11B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */; };
@@ -59,17 +56,12 @@
 		D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoondListCell.swift; sourceTree = "<group>"; };
 		D63ACA611EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodListViewControllerViewModel.swift; sourceTree = "<group>"; };
 		D63ACA6A1EC5B20900F35719 /* RMValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMValidationService.swift; sourceTree = "<group>"; };
+		D67947B41ED17A39005FD6EF /* HPMailDirectDrawCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPMailDirectDrawCell.h; sourceTree = "<group>"; };
+		D67947B51ED17A39005FD6EF /* HPMailDirectDrawCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPMailDirectDrawCell.m; sourceTree = "<group>"; };
 		D690F4061ECAE9C30084A76E /* RMLeftMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLeftMenuController.swift; sourceTree = "<group>"; };
 		D690F4081ECAF5C10084A76E /* BouncePresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncePresentAnimation.swift; sourceTree = "<group>"; };
 		D690F40A1ECB065D0084A76E /* RMMoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMMoodDetailViewController.swift; sourceTree = "<group>"; };
 		D690F41F1ECC6DAB0084A76E /* RMLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMLoginService.swift; sourceTree = "<group>"; };
-		D690F4221ECC6ECA0084A76E /* SPFBottomOrderInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFBottomOrderInfoView.h; sourceTree = "<group>"; };
-		D690F4231ECC6ECA0084A76E /* SPFBottomOrderInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFBottomOrderInfoView.m; sourceTree = "<group>"; };
-		D690F4251ECC71530084A76E /* SPFBottomOrderInfoAdressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFBottomOrderInfoAdressCell.h; sourceTree = "<group>"; };
-		D690F4261ECC71530084A76E /* SPFBottomOrderInfoAdressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFBottomOrderInfoAdressCell.m; sourceTree = "<group>"; };
-		D690F4271ECC71530084A76E /* SPFBottomOrderInfoAdressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPFBottomOrderInfoAdressCell.xib; sourceTree = "<group>"; };
-		D690F42A1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFBottomOrderInfoViewViewModel.h; sourceTree = "<group>"; };
-		D690F42B1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPFBottomOrderInfoViewViewModel.m; sourceTree = "<group>"; };
 		D6FA68621EB71DB0002C11B2 /* RecMood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecMood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FA686A1EB71DB0002C11B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				D690F41E1ECC6DAB0084A76E /* Service */,
-				D690F4201ECC6DAB0084A76E /* View */,
 				D60FF19E1EC15E0D001A5146 /* Controller */,
 				D60FF1A01EC15E0D001A5146 /* ViewModel */,
 			);
@@ -202,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				D60FF1AE1EC1AF0C001A5146 /* RMMoondListCell.swift */,
+				D67947B41ED17A39005FD6EF /* HPMailDirectDrawCell.h */,
+				D67947B51ED17A39005FD6EF /* HPMailDirectDrawCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -220,20 +213,6 @@
 				D690F41F1ECC6DAB0084A76E /* RMLoginService.swift */,
 			);
 			path = Service;
-			sourceTree = "<group>";
-		};
-		D690F4201ECC6DAB0084A76E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D690F4221ECC6ECA0084A76E /* SPFBottomOrderInfoView.h */,
-				D690F4231ECC6ECA0084A76E /* SPFBottomOrderInfoView.m */,
-				D690F4251ECC71530084A76E /* SPFBottomOrderInfoAdressCell.h */,
-				D690F4261ECC71530084A76E /* SPFBottomOrderInfoAdressCell.m */,
-				D690F4271ECC71530084A76E /* SPFBottomOrderInfoAdressCell.xib */,
-				D690F42A1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.h */,
-				D690F42B1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		D6FA68591EB71DB0002C11B2 = {
@@ -366,7 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D690F4291ECC71530084A76E /* SPFBottomOrderInfoAdressCell.xib in Resources */,
 				D6FA68701EB71DB0002C11B2 /* LaunchScreen.storyboard in Resources */,
 				D6FA68801EB72020002C11B2 /* PersonalCenter.storyboard in Resources */,
 				D6FA686D1EB71DB0002C11B2 /* Assets.xcassets in Resources */,
@@ -435,8 +413,6 @@
 				D60FF1621EBC2014001A5146 /* RMTableViewModel.swift in Sources */,
 				D60FF1921EC0A0C5001A5146 /* RMStoryBoardLoad.swift in Sources */,
 				D63ACA6B1EC5B20900F35719 /* RMValidationService.swift in Sources */,
-				D690F4241ECC6ECA0084A76E /* SPFBottomOrderInfoView.m in Sources */,
-				D690F42C1ECC71E80084A76E /* SPFBottomOrderInfoViewViewModel.m in Sources */,
 				D690F40B1ECB065D0084A76E /* RMMoodDetailViewController.swift in Sources */,
 				D60FF1671EBC278F001A5146 /* RMImageInfo.swift in Sources */,
 				D60FF1B11EC1AF0C001A5146 /* RMMoondListViewController.swift in Sources */,
@@ -446,12 +422,12 @@
 				D690F4071ECAE9C30084A76E /* RMLeftMenuController.swift in Sources */,
 				D690F4211ECC6DAB0084A76E /* RMLoginService.swift in Sources */,
 				D63ACA621EC469FA00F35719 /* RMMoodListViewControllerViewModel.swift in Sources */,
+				D67947B61ED17A39005FD6EF /* HPMailDirectDrawCell.m in Sources */,
 				D60FF1B21EC1AF0C001A5146 /* RMMoondListCell.swift in Sources */,
 				D60FF1A11EC15E0D001A5146 /* RMLoginViewController.swift in Sources */,
 				D60FF1A31EC15E3B001A5146 /* RMLoginViewControllerViewModel.swift in Sources */,
 				D60FF1971EC0A56C001A5146 /* RMUserAccountManager.swift in Sources */,
 				D60FF1991EC157E6001A5146 /* Protocol.swift in Sources */,
-				D690F4281ECC71530084A76E /* SPFBottomOrderInfoAdressCell.m in Sources */,
 				D60FF1631EBC2014001A5146 /* RMViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
