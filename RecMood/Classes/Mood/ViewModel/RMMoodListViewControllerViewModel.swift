@@ -8,12 +8,12 @@
 
 import Foundation
 
+
 struct RMMoodModel
 {
     var title = ""
     var content = ""
-    var imageURL : String? = nil
-    var imageInfo = RMImageInfo()
+    var imageInfo = RMImageInfo.init()
 }
 
 class RMMoodListViewControllerViewModel: RMTableViewModel

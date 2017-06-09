@@ -20,16 +20,13 @@ def dev_pods
 #pod 'SDWebImage/GIF'
 pod 'Kingfisher', '~> 3.0' # 异步图片加载
 pod 'Alamofire', '~> 4.0' # 网络
+pod 'SnapKit', '~> 3.2.0' # 自动布局
 end
 
 target 'RecMood' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
   dev_pods
-  
   rx_swift
-  pod 'Masonry'
-  
 #  reactive_swift
 end

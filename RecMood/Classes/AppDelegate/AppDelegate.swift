@@ -52,12 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             
         }
         
-        if !RMUserAccountManager.default.isLogin()
-        {
-            self.window?.rootViewController = RMStoryBoardLoader.mainViewController()
-        }
-        else
-        {
+        if !RMUserAccountManager.default.isLogin() {
+            self.window?.rootViewController = RMStoryBoardLoader.leftMenuViewController()
+        } else {
             self.window?.rootViewController = RMStoryBoardLoader.loginViewControllerNav()
         }
         

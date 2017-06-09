@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RMMoondListViewController: UITableViewController, RMLeftMenuControllerDelegate
+class RMMoondListViewController: UITableViewController
 {
     lazy var viewModel = RMMoodListViewControllerViewModel()
     
@@ -30,22 +30,16 @@ class RMMoondListViewController: UITableViewController, RMLeftMenuControllerDele
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else {
-            return
-        }
-        if identifier == "showLeftMenu" {
-            if let vc = segue.destination as? RMLeftMenuController {
-                vc.delegate = self
-            }
-        }
+//        guard let identifier = segue.identifier else {
+//            return
+//        }
+//        if identifier == "showLeftMenu" {
+//            if let vc = segue.destination as? RMLeftMenuController {
+//                vc.delegate = self
+//            }
+//        }
     }
     
-    func leftMenuWillShow() {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    func leftMenuWillHidden() {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10;

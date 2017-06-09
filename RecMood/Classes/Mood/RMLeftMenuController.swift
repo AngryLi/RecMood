@@ -21,72 +21,18 @@ class RMLeftMenuController: UIViewController
     
     @IBOutlet var tableView:UITableView!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-//        self.modalPresentationCapturesStatusBarAppearance = true
-        self.renderSubView()
-    }
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        self.delegate?.leftMenuWillShow()
-//    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.showSubViews()
-    }
-    private func showSubViews(completeHandler:((Bool)->Void)? = nil)
-    {
-        self.delegate?.leftMenuWillShow()
-        UIView.animate(withDuration: self.duration, animations: {
-            self.view.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
-            self.initTablePositionShowed()
-        }, completion: completeHandler)
-    }
-    
-    private func hiddenSubviews(completeHandler:((Bool)->Void)? = nil)
-    {
-        self.delegate?.leftMenuWillHidden()
-        UIView.animate(withDuration: self.duration, animations: {
-            self.view.backgroundColor = UIColor.clear
-            self.initTablePositionHidden()
-        }, completion: completeHandler)
-    }
-    
-    private func initTablePositionHidden()
-    {
-        self.tableView.transform = CGAffineTransform.init(translationX: -self.tableView.bounds.size.width, y: 0)
-    }
-    private func initTablePositionShowed()
-    {
-        self.tableView.transform = CGAffineTransform.identity
-    }
-    
-    private func renderSubView()
-    {
-//        self.transitioningDelegate = self
-        self.view.backgroundColor = UIColor.clear
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handle_tapView(sender:)))
-        self.view.addGestureRecognizer(tap)
-        
-        self.initTablePositionHidden()
-    }
-    
-    @objc private func handle_tapView(sender:UITapGestureRecognizer)
-    {
-        if !self.tableView.frame.contains(sender.location(in: sender.view)) {
-            self.hiddenSubviews(completeHandler: { (finished) in
-                self.dismiss(animated: false, completion: nil)
-            })
-        }
     }
     
 //    override var preferredStatusBarStyle: UIStatusBarStyle {
 //        return .lightContent
 //    }
     
-//    override var prefersStatusBarHidden: Bool {
-//        return true
-//    }
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -12,5 +12,5 @@ public struct RMImageInfo
 {
     public let width : Float = 0
     public let height : Float = 0
+    public let url : String? = nil
 }
-

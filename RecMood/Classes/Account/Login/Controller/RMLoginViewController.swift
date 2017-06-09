@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Kingfisher
+import SnapKit
 
 class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
 {
@@ -36,6 +37,16 @@ class RMLoginViewController : RMBaseViewController, RMBindViewModelProperty
         self.renderSubViews()
         
         self.bindViewModel()
+        
+        let topTipView : UIView = {
+            let view = UIView(frame: CGRect.zero)
+            view.backgroundColor = UIColor.red
+            return view
+        }()
+        self.view.addSubview(topTipView)
+        topTipView.snp.makeConstraints { (maker) in
+            maker.edges.equalTo(self.view)
+        }
     }
 
     override func didReceiveMemoryWarning()

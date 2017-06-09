@@ -54,7 +54,7 @@ class RMMoondListCell: UITableViewCell {
         self.lbTitle.text = moodItem?.title
         self.lbContent.text = moodItem?.content
         
-        if let imageURL = moodItem?.imageURL {
+        if let imageURL = moodItem?.imageInfo.url {
             self.imgContent.kf.setImage(with: URL.init(string: imageURL), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
         } else {
             self.imgContent.image = nil;

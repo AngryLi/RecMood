@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ct7-bd-9PP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G8c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ct7-bd-9PP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,7 +94,7 @@
                     <navigationItem key="navigationItem" id="Ki5-ca-LHs">
                         <barButtonItem key="leftBarButtonItem" systemItem="fastForward" id="pYM-4r-u20">
                             <connections>
-                                <segue destination="F0I-Lv-teX" kind="presentation" identifier="showLeftMenu" animates="NO" modalPresentationStyle="overFullScreen" id="fZh-Oo-vro"/>
+                                <action selector="action_showLeftMenu" destination="XsS-fv-m8z" id="HLW-rs-heA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YDg-Dk-UKb">
-                                <rect key="frame" x="0.0" y="0.0" width="275" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -124,7 +124,7 @@
                             <constraint firstItem="YDg-Dk-UKb" firstAttribute="top" secondItem="fwS-17-MeY" secondAttribute="top" id="6y7-Eb-E5A"/>
                             <constraint firstItem="gQl-eL-U5v" firstAttribute="top" secondItem="YDg-Dk-UKb" secondAttribute="bottom" id="a4Y-VC-hhU"/>
                             <constraint firstItem="YDg-Dk-UKb" firstAttribute="leading" secondItem="fwS-17-MeY" secondAttribute="leading" id="cEx-Jm-sTW"/>
-                            <constraint firstAttribute="trailing" secondItem="YDg-Dk-UKb" secondAttribute="trailing" constant="100" id="sWh-h2-nQ8"/>
+                            <constraint firstAttribute="trailing" secondItem="YDg-Dk-UKb" secondAttribute="trailing" id="sWh-h2-nQ8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -157,7 +157,4 @@
             <point key="canvasLocation" x="2638" y="1463"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="SLI-Gd-XV3"/>
-    </inferredMetricsTieBreakers>
 </document>

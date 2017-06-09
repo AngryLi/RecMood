@@ -40,7 +40,6 @@
 		44A3BC2CE6B3BE25FF76DCBB /* Pods-RecMood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecMood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecMood/Pods-RecMood.debug.xcconfig"; sourceTree = "<group>"; };
 		83BEBE934075586AA85226FA /* Pods-RecMood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecMood.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecMood/Pods-RecMood.release.xcconfig"; sourceTree = "<group>"; };
 		CB8CB531681E3CEE8B407D2B /* Pods_RecMood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RecMood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D60FF1541EBC1E7D001A5146 /* RecMood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecMood-Bridging-Header.h"; sourceTree = "<group>"; };
 		D60FF1601EBC2014001A5146 /* RMTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMTableViewModel.swift; sourceTree = "<group>"; };
 		D60FF1611EBC2014001A5146 /* RMViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMViewModel.swift; sourceTree = "<group>"; };
 		D60FF1661EBC278F001A5146 /* RMImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMImageInfo.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 				D6FA686C1EB71DB0002C11B2 /* Assets.xcassets */,
 				D6FA686E1EB71DB0002C11B2 /* LaunchScreen.storyboard */,
 				D6FA68711EB71DB0002C11B2 /* Info.plist */,
-				D60FF1541EBC1E7D001A5146 /* RecMood-Bridging-Header.h */,
 			);
 			name = "Support Files";
 			sourceTree = "<group>";
@@ -572,13 +570,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2DBJCY9C5;
 				INFOPLIST_FILE = RecMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RecMood/RecMood-Bridging-Header.h";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -590,13 +591,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2DBJCY9C5;
 				INFOPLIST_FILE = RecMood/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.angryli.RecMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "RecMood/RecMood-Bridging-Header.h";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
